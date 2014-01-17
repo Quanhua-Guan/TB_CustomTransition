@@ -171,6 +171,8 @@
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIImageView *screnshot = [[UIImageView alloc] initWithImage:image];
     
+    UIGraphicsEndImageContext();// this method and UIGraphicsBeginImageContextWithOptions(...) are "couple".
+    
     return screnshot;
 }
 
